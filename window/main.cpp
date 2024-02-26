@@ -6,7 +6,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
     static HWND hButtonPlus, hButtonMinus, hButtonMultiply, hButtonDivide;
     switch(Message) {
         case WM_CREATE: {
-            CreateWindowEx(0,"STATIC","Please input two numbers", WS_CHILD | WS_VISIBLE, 20, 10, 200, 20, hwnd, NULL, NULL, NULL);
+            CreateWindowEx(0, "STATIC", "Please input two numbers", WS_CHILD | WS_VISIBLE, 20, 10, 200, 20, hwnd, NULL, NULL, NULL);
             hEdit1 = CreateWindowEx(WS_EX_CLIENTEDGE, "EDIT", "", WS_CHILD | WS_VISIBLE, 40, 40, 160, 20, hwnd, NULL, NULL, NULL);
             hEdit2 = CreateWindowEx(WS_EX_CLIENTEDGE, "EDIT", "", WS_CHILD | WS_VISIBLE, 40, 70, 160, 20, hwnd, NULL, NULL, NULL);
 
@@ -89,7 +89,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     wc.lpfnWndProc    = WndProc;
     wc.hInstance      = hInstance;
     wc.hCursor        = LoadCursor(NULL, IDC_ARROW);
-    wc.hbrBackground  = CreateSolidBrush(RGB(255, 192, 203));
+    wc.hbrBackground = CreateSolidBrush(RGB(255, 192, 203));
     wc.lpszClassName  = "WindowClass";
     wc.hIcon          = LoadIcon(NULL, IDI_APPLICATION);
     wc.hIconSm        = LoadIcon(NULL, IDI_APPLICATION);
